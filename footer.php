@@ -1,4 +1,3 @@
-
 <footer>
 <div class="container-fluid bg-footer mt-4">
 <div class="container">
@@ -39,9 +38,7 @@
 </div>
   </div>
       <a class="voltarTopo" id="topo"><img src="https://www.climatis.com.br/Blog/wp-content/uploads/2020/03/img_Voltar_topo.png" aria-hidden="true" alt="voltar topo do site"></a>
-
 </footer>
 <?php wp_footer(); ?>
-
 </body>
 </html>

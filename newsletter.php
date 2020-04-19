@@ -5,7 +5,6 @@
   <div class="tnp tnp-subscription">
   <div class="tnp tnp-subscription">
 <form method="post" action="https://www.climatis.com.br/Blog/?na=s" onsubmit="return newsletter_check(this)">
-
 <input type="hidden" name="nlang" value="">
 <div class="tnp-field tnp-field-firstname"><label>Nome</label><input class="tnp-firstname" type="text" name="nn" required></div>
 <div class="tnp-field tnp-field-lastname"><label>Sobrenome</label><input class="tnp-lastname" type="text" name="ns" required></div>

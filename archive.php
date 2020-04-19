@@ -7,9 +7,7 @@
         <h1 class="text-center titulo">
            <?php the_archive_title();  ?>
           </h1>
-
             <?php the_archive_description();  ?>
-
           </header>
   </div>
 </div>
