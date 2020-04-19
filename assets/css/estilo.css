@@ -1,0 +1,225 @@
+/*BODY*/
+body {
+  background-color: #DDDDDD;
+}
+
+.titulo {
+  color: chocolate;
+}
+
+/* CABEÇALHO*/
+.bg-header {
+  background: #FF7F00
+}
+
+.bg-header div.icon {
+  padding-right: 0.5em
+}
+
+div.icon a {
+  padding-right: 0.8em;
+  color: black
+}
+
+div.icon a:hover {
+  color: blue
+}
+
+/* RODAPE*/
+.bg-footer {
+  background-color: #000000
+}
+
+.bg-footer ul {
+  -webkit-padding-start: 0;
+}
+
+.bg-footer ul li {
+  list-style: none;
+}
+
+.icones a {
+  padding-right: 0.8em;
+}
+
+.bg-footer-2 {
+  background-color: #393e3e;
+  color: #fff;
+}
+
+.bg-footer-2 a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* General Template*/
+.bg-general-header {
+  background: #fff
+}
+
+/* Archive Template */
+.header-config p {
+  text-align: center;
+  color: #000;
+}
+
+/*Configurações Gerais*/
+.underline {
+  content: '';
+  border-top: 2px solid #da251d;
+  width: 120px;
+  display: block;
+  margin-bottom: 8px;
+  margin: 0 auto;
+}
+
+.btn-link {
+  background-color: #fff;
+  border-color: #FF4000;
+  color: #000;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  background: #FF4000;
+  color: #000;
+  text-decoration: none;
+}
+
+.envolve_pag {
+  background-color: #eee
+}
+
+.pag-link a {
+  color: #FF4000;
+}
+
+.pag-link a:hover {
+  color: #000;
+  text-decoration: none;
+  background: #FF4000;
+}
+
+/*
+Configurações Menu Lateral
+*/
+.card-list {
+  padding: 0.05rem;
+}
+
+.card-list a {
+  color: #ff6600;
+  padding: 0.5rem;
+}
+
+.card-list a:hover {
+  text-decoration: none;
+  color: #ff6600;
+}
+
+.card-list>ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.card-list>ul>li:focus,
+.card-list>ul>li:hover {
+  z-index: 1;
+  text-decoration: none;
+}
+
+.card-list>ul>li {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+
+.card-list>ul>li:first-child {
+  border-top: 0;
+}
+
+.card-list>ul>li:last-child {
+  border-bottom: 0;
+}
+
+.card-list>ul>li>a {
+  color: #ff6600;
+  display: block;
+}
+
+.card-list>ul>li>a:hover {
+  text-decoration: none;
+  color: #ff6600;
+}
+
+.card-list>ul>li:focus,
+.card-list>ul>li:hover {
+  color: #495057;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+
+.searchform div {
+  padding: 10px;
+}
+
+.searchform div input {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+#searchsubmit {
+  background-color: #ff4000;
+  border-color: #ff4000;
+  color: #fff;
+}
+
+#searchsubmit:hover,
+#searchsubmit:focus {
+  background-color: #ff6633;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Estilos page-home*/
+header.title h2 {
+  color: #FF4000;
+}
+
+/*Estilo pag 404*/
+p.fonte {
+  font-family: 'Lacquer', cursive;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+h3.fonte {
+  font-family: 'Lacquer', cursive;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+/*botao voltar topo do site*/
+.voltarTopo {
+  width: auto;
+  height: 48px;
+  position: fixed;
+  right: 20px;
+  bottom: 95px;
+  cursor: pointer
+}
+
+.newsletter {
+  color: #495057
+}
