@@ -16,7 +16,6 @@
       <h3 class="titulo fonte" >ERRO 404!</h3>
     </div>
   </div>
-
 </body>
 </html>
 <?php get_footer(); ?>
