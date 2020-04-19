@@ -1,2 +1,2 @@
 # temaClimatis
-Tema WordPress com Bootstrap 
+Tema WordPress usando Bootstrap 4.4.1 para responsividade
