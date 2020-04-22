@@ -42,7 +42,7 @@
 <?php wp_footer(); ?>
 <!--Script para botão voltar ao topo do site -->
 <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="assets\js\VoltarTopo.js"></script>
+    <script async src="assets\js\VoltarTopo.js"></script>
     <script async  type="text/javascript">
     jQuery(document).ready(function(){
 
