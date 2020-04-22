@@ -1,8 +1,8 @@
  <?php get_header(); ?>
- <div class="container-fluid" style="background:#090808">
+ <div class="container" style="background:#000">
  <div class="titulo my-3 text-center">
  <h1>Conheça os serviços realizados pela Climátis</h1>
- <p><h2>Acesse nosso website: <a href="https:www.climatis.com.br" target="_new">Climátis</a></p></h2>
+ <p ><h2>Acesse <a href="https://www.climatis.com.br" target="_new" style="color:chocolate; text-decoration:underline">Climátis Ar Condicionado, Refrigeração e Energia Solar</a></h2></p>
  </div>
 </div>
 <!-- Notícias em destaque-->
@@ -10,7 +10,7 @@
   <div class="container envolve_pag">
 <section class="py-4 my-4">
 <header class="title bg-general-header">
-<h2 class="text-center">Últimas da Climátis<span class="underline"></span></h2>
+<h2 class="text-center titulo">Últimas da Climátis<span class="underline"></span></h2>
 <p class="text-center">Acompanhe as últimas postagens e novidades publicadas em nosso Blog.</p>
 </header>
 <div class="row">

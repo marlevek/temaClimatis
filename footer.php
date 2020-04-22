@@ -15,7 +15,8 @@
      wp_nav_menu(
        array(
         'theme-location' => 'footer_menu',
-        'before' => '<i class="fa fa-angle-right text-light"></i> '
+        'before' => '<i class="fa fa-angle-right text-light"></i> '      
+
       )
    );
    ?>
