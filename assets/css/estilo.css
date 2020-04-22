@@ -34,13 +34,24 @@ div.icon a:hover {
   -webkit-padding-start: 0;
 }
 
+.bg-footer ul li {
+  color: #fff;
+  list-style: none;
+}
+
 .bg-footer ul li a {
+  color: #fff;
+  list-style: none;
+}
+
+ul#menu-menutopo-1.menu li {
   color: #fff;
   list-style: none;
 }
 
 ul#menu-menutopo-1.menu li a {
   color: #fff;
+  list-style: none;
 }
 
 .icones a {

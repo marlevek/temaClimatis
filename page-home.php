@@ -10,7 +10,7 @@
   <div class="container envolve_pag">
 <section class="py-4 my-4">
 <header class="title bg-general-header">
-<h2 class="text-center titulo">Últimas da Climátis<span class="underline"></span></h2>
+<h2 class="text-center" style="color:chocolate">Últimas da Climátis<span class="underline"></span></h2>
 <p class="text-center">Acompanhe as últimas postagens e novidades publicadas em nosso Blog.</p>
 </header>
 <div class="row">
