@@ -1,7 +1,9 @@
  <?php get_header(); ?>
  <div class="container-fluid" style="background:#090808">
- <div class="titulo my-3 text-center"><h1>Alguns serviços realizados pela Climátis</h1></div>
- <?php masterslider(1); ?>
+ <div class="titulo my-3 text-center">
+ <h1>Conheça os serviços realizados pela Climátis</h1>
+ <p><h2>Acesse nosso website: <a href="https:www.climatis.com.br" target="_new">Climátis</a></p></h2>
+ </div>
 </div>
 <!-- Notícias em destaque-->
 <div class="container-fluid">

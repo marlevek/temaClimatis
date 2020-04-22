@@ -3,8 +3,8 @@
   <head>
     <meta charset="<?php  bloginfo('charset') ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Realizamos serviço de vendas, instalação e manutenção de ar condicionado, refrigeração e energia solar, com atendimento de qualidade e valor justo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Serviço de vendas, instalação e manutenção de ar condicionado, refrigeração e energia solar com atendimento de qualidade e valor justo">
     <?php wp_head(); ?>
  
     </head>
