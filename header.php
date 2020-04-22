@@ -6,30 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Realizamos serviço de vendas, instalação e manutenção de ar condicionado, refrigeração e energia solar, com atendimento de qualidade e valor justo">
     <?php wp_head(); ?>
-<!--Script para botão voltar ao topo do site -->
-   <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script  async src="https://www.climatis.com.br/Blog/wp-content/themes/temaClimatis/VoltarTopo.js"></script>
-    <script async  type="text/javascript">
-    jQuery(document).ready(function(){
-
-    jQuery(".voltarTopo").hide();
-
-    jQuery('a#topo').click(function () {
-             jQuery('body,html').animate({
-               scrollTop: 0
-             }, 800);
-            return false;
-       });
-
-    jQuery(window).scroll(function () {
-             if (jQuery(this).scrollTop() > 150) {
-                jQuery('#topo').fadeIn();
-             } else {
-                jQuery('#topo').fadeOut();
-             }
-         });
-    });
-    </script>
+ 
     </head>
   <body <?php body_class();  ?>>
         <header>

@@ -37,8 +37,32 @@
 </div>
 </div>
   </div>
-      <a class="voltarTopo" id="topo"><img src="https://www.climatis.com.br/Blog/wp-content/uploads/2020/03/img_Voltar_topo.png" aria-hidden="true" alt="voltar topo do site"></a>
+      <a class="voltarTopo" id="topo"><img src="https://www.climatis.com.br/Blog/wp-content/uploads/2020/03/img_Voltar_topo.png.webp" aria-hidden="true" alt="botão voltar topo do site"></a>
 </footer>
 <?php wp_footer(); ?>
+<!--Script para botão voltar ao topo do site -->
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script  async src="https://www.climatis.com.br/Blog/wp-content/themes/temaClimatis/VoltarTopo.js"></script>
+    <script async  type="text/javascript">
+    jQuery(document).ready(function(){
+
+    jQuery(".voltarTopo").hide();
+
+    jQuery('a#topo').click(function () {
+             jQuery('body,html').animate({
+               scrollTop: 0
+             }, 800);
+            return false;
+       });
+
+    jQuery(window).scroll(function () {
+             if (jQuery(this).scrollTop() > 150) {
+                jQuery('#topo').fadeIn();
+             } else {
+                jQuery('#topo').fadeOut();
+             }
+         });
+    });
+    </script>
 </body>
 </html>
