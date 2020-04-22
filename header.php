@@ -7,9 +7,9 @@
     <meta name="description" content="Realizamos serviço de vendas, instalação e manutenção de ar condicionado, refrigeração e energia solar, com atendimento de qualidade e valor justo">
     <?php wp_head(); ?>
 <!--Script para botão voltar ao topo do site -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="https://www.climatis.com.br/Blog/wp-content/themes/temaClimatis/VoltarTopo.js"></script>
-    <script type="text/javascript">
+   <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script  async src="https://www.climatis.com.br/Blog/wp-content/themes/temaClimatis/VoltarTopo.js"></script>
+    <script async  type="text/javascript">
     jQuery(document).ready(function(){
 
     jQuery(".voltarTopo").hide();
