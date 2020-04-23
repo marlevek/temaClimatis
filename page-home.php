@@ -2,7 +2,7 @@
  <div class="container" style="background:#000">
  <div class="titulo my-3 text-center">
  <h1>Conheça os serviços realizados pela Climátis</h1>
- <p ><h2 style="color:white">Acesse <a href="https://www.climatis.com.br" target="_new" style="color:white; text-decoration:underline">Climátis Ar Condicionado, Refrigeração e Energia Solar</a></h2></p>
+ <p ><h2 style="color:white; margin-bottom:0.3em">Acesse <a class="link-site" href="https://www.climatis.com.br" target="_new">Climátis Ar Condicionado, Refrigeração e Energia Solar</a></h2></p>
  </div>
 </div>
 <!-- Notícias em destaque-->

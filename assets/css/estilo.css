@@ -213,6 +213,16 @@ header.title h2 {
   color: #FF4000;
 }
 
+.link-site {
+  color: white;
+  text-decoration: underline
+}
+
+.link-site a:hover {
+  text-decoration: none;
+  color: lightskyblue
+}
+
 /*Estilo pag 404*/
 p.fonte {
   font-family: 'Lacquer', cursive;
