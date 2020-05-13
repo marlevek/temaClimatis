@@ -8,7 +8,7 @@
            Resultado da Pesquisa por: <?php echo get_search_query();  ?>
           </h1>
          <p class="lead text-center">
-           Sua busca em noso Blog retornou os seguintes resultados...
+           Sua busca em nosso Blog retornou os seguintes resultados...
          </p>
           </header>
   </div>
