@@ -13,7 +13,7 @@ body {
   background: #FF7F00
 }
 
-.bg-header div.icon {
+.bg-header .icon {
   padding-right: 0.5em
 }
 
@@ -23,7 +23,8 @@ div.icon a {
 }
 
 div.icon a:hover {
-  color: blue
+  font-size: 1.1em;
+  text-shadow: 1px 1px 1px #000
 }
 
 /* RODAPE*/
@@ -249,6 +250,7 @@ h3.fonte {
   cursor: pointer
 }
 
+/*Newsletter*/
 .newsletter {
   color: #495057
 }
