@@ -21,7 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
         <header>
-      <div class="container-fluid bg-header text-center icon" >
+        <div class="container-fluid bg-header text-center icon" >
         <div class="row">
           <div class="col-sm-12">
     <a href="https://www.facebook.com/ClimatisArcondicionado" target="_new"><i class="fab fa-facebook-square fa-2x" ></i></a>
@@ -31,8 +31,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="https://wa.me/5541992422364?text=sua%20mensagem" > <i class="fab fa-whatsapp fa-2x" ></i></a>
     <a href="mailto:atendimento@climatis.com.br" target="_blank" ><i class="far fa-envelope fa-2x "></i></a>
   </div>
-  </div>
-  </div>
+</div>
+</div>
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black">
   <a href="<?php echo home_url(); ?>" class="navbar-brand">
   <?php the_custom_logo(); ?>
@@ -40,6 +40,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="menu" aria-expanded="false" aria-label="Menu Collapse">
     <span class="navbar-toggler-icon text-light" ></span>
   </button>
+  
+
   <?php
    wp_nav_menu(
     array(
