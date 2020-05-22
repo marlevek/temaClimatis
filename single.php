@@ -2,7 +2,7 @@
 <?php
          // enquanto houver, mostre o post
              while (have_posts()): the_post();
-        // todo o conteúdo desta página
+        
 ?>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0&appId=212224593251658&autoLogAppEvents=1"></script>
@@ -38,6 +38,11 @@
           <?php  previous_post_link('%link &raquo;'); ?>
         </div>
 </div>
+<?php // se tiver comentário liberado no post
+if(comments_open() || get_comments_number() ) :
+ '< class="text-left col-sm-6">'.comments_template('/comments.php').'</div>';
+endif;
+?>
 </div>
 <div class="col-md-4"><?php
     dynamic_sidebar('sidebar-right');
