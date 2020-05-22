@@ -10,7 +10,6 @@
       wp_enqueue_style('font', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css', array(), '5.2.0', 'all');
       wp_enqueue_style('estilo', get_template_directory_uri().'/assets/css/estilo.css', array(), '1.0', 'all');
   }
-
   add_action('wp_enqueue_scripts', 'load_scripts');
 
   // Registro de menus
@@ -57,7 +56,7 @@
               'description' => ('Adicione suas Redes Sociais') ,
                 'before_widget' => '<div class="text-light icones">' ,
                   'after_widget' => '</div>' ,
-                    'before_title' => '<h5 class="text-light"><i class="fas fa-users fa-1x mr-2 text-light"></i>' ,
+                    'before_title' => '<h5 class="text-light"><i class="social-icons fas fa-users fa-1x mr-2 text-light"></i>' ,
                       'after_title' => '</h5>'
 
         )

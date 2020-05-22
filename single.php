@@ -40,7 +40,7 @@
 </div>
 <?php // se tiver comentário liberado no post
 if(comments_open() || get_comments_number() ) :
- '< class="text-left col-sm-6">'.comments_template('/comments.php').'</div>';
+ '<div class="col-sm-4">'.comments_template('/comments.php').'</div>';
 endif;
 ?>
 </div>

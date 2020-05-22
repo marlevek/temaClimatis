@@ -1,129 +1,60 @@
 <?php
 /**
- * The template file for displaying the comments and comment form for the
- * Climatis Theme.
- *
+ * Aqui vamos garantir que os comentários só vão aparecer em posts, páginas ou
+ * anexos. Além disso, também bloqueamos os comentários para páginas com senha,
+ * eles só vão aparecer se o usuário digitar a senha.
  */
-
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
-*/
-if ( post_password_required() ) {
+if ( post_password_required() || ! is_singular() ) {
 	return;
 }
+?>
 
-if ( $comments ) {
-	?>
+<?php
+/**
+ * A área de comentários do tema "TwentyFourteen"
+ * com algumas edições necessárias.
+ */
+?>
+<div id="comments" class="comments-area">
 
-	<div class="comments" id="comments">
+	<?php if ( have_comments() ) : ?>
 
+	<h4 class="comments-title">
+		Comentários
+	</h4>
+
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+		<h5 class="screen-reader-text">Navegação dos comentários</h5>
+		<div class="nav-previous"><?php previous_comments_link( 'Comentários mais antigos' ); ?></div>
+		<div class="nav-next"><?php next_comments_link(  'Comentários mais recentes'  ); ?></div>
+	</nav><!-- #comment-nav-above -->
+	<?php endif; // Check for comment navigation. ?>
+
+	<ol class="comment-list">
 		<?php
-		$comments_number = absint( get_comments_number() );
+			wp_list_comments( array(
+				'style'      => 'ol',
+				'short_ping' => true,
+				'avatar_size'=> 34,
+			) );
 		?>
+	</ol><!-- .comment-list -->
 
-		<div class="comments-header section-inner small max-percentage">
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+		<h5 class="screen-reader-text">Navegação dos comentários</h5>
+		<div class="nav-previous"><?php previous_comments_link( 'Comentários mais antigos' ); ?></div>
+		<div class="nav-next"><?php next_comments_link(  'Comentários mais recentes'  ); ?></div>
+	</nav><!-- #comment-nav-above -->
+	<?php endif; // Check for comment navigation. ?>
 
-			<h2 class="comment-reply-title">
-			<?php
-			if ( ! have_comments() ) {
-				_e( 'Leave a comment', 'twentytwenty' );
-			} elseif ( '1' === $comments_number ) {
-				/* translators: %s: post title */
-				printf( _x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'twentytwenty' ), esc_html( get_the_title() ) );
-			} else {
-				echo sprintf(
-					/* translators: 1: number of comments, 2: post title */
-					_nx(
-						'%1$s reply on &ldquo;%2$s&rdquo;',
-						'%1$s replies on &ldquo;%2$s&rdquo;',
-						$comments_number,
-						'comments title',
-						'twentytwenty'
-					),
-					number_format_i18n( $comments_number ),
-					esc_html( get_the_title() )
-				);
-			}
+	<?php if ( ! comments_open() ) : ?>
+	<p class="no-comments">Os comentários estão fechados.</p>
+	<?php endif; ?>
+	
+	<?php endif; // have_comments() ?>
 
-			?>
-			</h2><!-- .comments-title -->
+	<?php comment_form(); ?>
 
-		</div><!-- .comments-header -->
-
-		<div class="comments-inner section-inner thin max-percentage">
-
-			<?php
-			wp_list_comments(
-				array(
-					'walker'      => new TwentyTwenty_Walker_Comment(),
-					'avatar_size' => 120,
-					'style'       => 'div',
-				)
-			);
-
-			$comment_pagination = paginate_comments_links(
-				array(
-					'echo'      => false,
-					'end_size'  => 0,
-					'mid_size'  => 0,
-					'next_text' => __( 'Newer Comments', 'twentytwenty' ) . ' <span aria-hidden="true">&rarr;</span>',
-					'prev_text' => '<span aria-hidden="true">&larr;</span> ' . __( 'Older Comments', 'twentytwenty' ),
-				)
-			);
-
-			if ( $comment_pagination ) {
-				$pagination_classes = '';
-
-				// If we're only showing the "Next" link, add a class indicating so.
-				if ( false === strpos( $comment_pagination, 'prev page-numbers' ) ) {
-					$pagination_classes = ' only-next';
-				}
-				?>
-
-				<nav class="comments-pagination pagination<?php echo $pagination_classes; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>" aria-label="<?php esc_attr_e( 'Comments', 'twentytwenty' ); ?>">
-					<?php echo wp_kses_post( $comment_pagination ); ?>
-				</nav>
-
-				<?php
-			}
-			?>
-
-		</div><!-- .comments-inner -->
-
-	</div><!-- comments -->
-
-	<?php
-}
-
-if ( comments_open() || pings_open() ) {
-
-	if ( $comments ) {
-		echo '<hr class="styled-separator is-style-wide" aria-hidden="true" />';
-	}
-
-	comment_form(
-		array(
-			'class_form'         => 'section-inner thin max-percentage',
-			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
-			'title_reply_after'  => '</h2>',
-		)
-	);
-
-} elseif ( is_single() ) {
-
-	if ( $comments ) {
-		echo '<hr class="styled-separator is-style-wide" aria-hidden="true" />';
-	}
-
-	?>
-
-	<div class="comment-respond" id="respond">
-
-		<p class="comments-closed"><?php _e( 'Comments are closed.', 'twentytwenty' ); ?></p>
-
-	</div><!-- #respond -->
-
-	<?php
-}
+</div><!-- #comments -->
