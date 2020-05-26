@@ -1,60 +1,76 @@
 <?php
-/**
- * Aqui vamos garantir que os comentários só vão aparecer em posts, páginas ou
- * anexos. Além disso, também bloqueamos os comentários para páginas com senha,
- * eles só vão aparecer se o usuário digitar a senha.
- */
-if ( post_password_required() || ! is_singular() ) {
-	return;
-}
-?>
+if (is_single() || is_page()) : ?>
 
-<?php
-/**
- * A área de comentários do tema "TwentyFourteen"
- * com algumas edições necessárias.
- */
-?>
-<div id="comments" class="comments-area">
+<div class="container">
 
-	<?php if ( have_comments() ) : ?>
-
-	<h4 class="comments-title">
-		Comentários
-	</h4>
-
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-		<h5 class="screen-reader-text">Navegação dos comentários</h5>
-		<div class="nav-previous"><?php previous_comments_link( 'Comentários mais antigos' ); ?></div>
-		<div class="nav-next"><?php next_comments_link(  'Comentários mais recentes'  ); ?></div>
-	</nav><!-- #comment-nav-above -->
-	<?php endif; // Check for comment navigation. ?>
-
-	<ol class="comment-list">
-		<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-				'avatar_size'=> 34,
-			) );
-		?>
-	</ol><!-- .comment-list -->
-
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-		<h5 class="screen-reader-text">Navegação dos comentários</h5>
-		<div class="nav-previous"><?php previous_comments_link( 'Comentários mais antigos' ); ?></div>
-		<div class="nav-next"><?php next_comments_link(  'Comentários mais recentes'  ); ?></div>
-	</nav><!-- #comment-nav-above -->
-	<?php endif; // Check for comment navigation. ?>
-
-	<?php if ( ! comments_open() ) : ?>
-	<p class="no-comments">Os comentários estão fechados.</p>
-	<?php endif; ?>
+<?php if (have_comments() && comments_open()) : ?>
+<h4 id="comments" class="mb-3">
+<?php comments_number(__('comentários'), __('1 comentário'), '%' . __(' comentários') ); ?>
+</h4>
+<div class="list-unlysted">
+<?php wp_list_comments( array(
+	'style'	=> 	'div',
+	'type'	=>	'comment',
+	'callback' => 'format_comment',
 	
-	<?php endif; // have_comments() ?>
+)); ?>
+</div>
+<?php $comments_arg = array(
+	'title_reply'			=>	'Escreva seu comentário',
+	'title_reply_before'	=>	'<h5 id="reply-title" class="comment-reply-title mt-4">',
+	'title_reply_after'		=>	'</h5>',
+	'class_submit'			=>	'btn btn-outline-primary',
+	'comment_notes_before'	=>	'<p class="lead">Seu email não será publicado.</p>',
+	'fields'				=>	apply_filters('comment_form_default_fields', array(
+		'author'		=>	'<div class="row"><div class="col-md-6 col-sm-12"><div class="form-group">' . '<label class="control-label" for="author">' . 
+		__('seu nome') . '</label>' . ($req ? '<span>*</span>' : '') . 
+		'<input id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter['comment_author']) . '" ' . 
+		$aria_req . '/></div></div>',
+		'email'	=>	'<div class="col-md-6 col-sm-12"><div class="form-group">' . 
+		'<label class="control-label" for="email"> ' . __('seu email') . '</label>' . ($req ? '<span>*</span>' : '') . 
+		'<input class="form-control" id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email']) . '" ' . $aria_req . '/></div></div></div>'
+			 
+		)),
+		'comment_field'  => '<p>' . 
+							'<textarea id="comment" class="form-control" placeholder="Sua mensagem..." name="comment" rows="3" aria-required="true"></textarea>' . '</p>',
+		'comment-notes-after' => '' ,
 
-	<?php comment_form(); ?>
 
-</div><!-- #comments -->
+	);
+
+		comment_form($comments_arg);
+
+?>  
+<?php else : if (comments_open()) : ?>
+	<?php $comments_arg = array(
+	'title_reply'			=>	'Escreva seu comentário',
+	'title_reply_before'	=>	'<h5 id="reply-title" class="comment-reply-title mt-4">',
+	'title_reply_after'		=>	'</h5>',
+	'class_submit'			=>	'btn btn-outline-primary',
+	'comment_notes_before'	=>	'<p class="lead">Seu email não será publicado.</p>',
+	'fields'				=>	apply_filters('comment_form_default_fields', array(
+		'author'		=>	'<div class="row"><div class="col-md-6 col-sm-12"><div class="form-group">' . '<label class="control-label" for="author">' . 
+		__('seu nome') . '</label>' . ($req ? '<span>*</span>' : '') . 
+		'<input id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter['comment_author']) . '" ' . 
+		$aria_req . '/></div></div>',
+		'email'	=>	'<div class="col-md-6 col-sm-12"><div class="form-group">' . 
+		'<label class="control-label" for="email"> ' . __('seu email') . '</label>' . ($req ? '<span>*</span>' : '') . 
+		'<input class="form-control" id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email']) . '" ' . $aria_req . '/></div></div></div>'
+			 
+		)),
+		'comment_field'  => '<p>' . 
+							'<textarea id="comment" class="form-control" placeholder="Sua mensagem..." name="comment" rows="3" aria-required="true"></textarea>' . '</p>',
+		'comment-notes-after' => '' ,
+
+
+	);
+
+		comment_form($comments_arg);
+
+?>  
+
+<?php endif; endif;?>
+
+</div>
+
+<?php endif; ?>
