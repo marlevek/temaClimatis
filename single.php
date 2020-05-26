@@ -38,11 +38,8 @@
           <?php  previous_post_link('%link &raquo;'); ?>
         </div>
 </div>
-<?php // se tiver comentário liberado no post
-if(comments_open() || get_comments_number() ) :
- '<div class="col-sm-4">'.comments_template('/comments.php').'</div>';
-endif;
-?>
+<?php comments_template();?>
+
 </div>
 <div class="col-md-4"><?php
     dynamic_sidebar('sidebar-right');
