@@ -1,6 +1,6 @@
 <?php
 // inclusão do arquivo para o menu responsivo
-require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+require_once get_template_directory_uri() . '/inc/wp-bootstrap-navwalker.php';
 
 // carregamento de css e js
 function load_scripts()
