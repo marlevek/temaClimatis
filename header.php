@@ -23,7 +23,7 @@
     <meta charset="<?php bloginfo('charset') ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Serviço de vendas, instalação e manutenção de ar condicionado, refrigeração e energia solar com atendimento de qualidade e valor justo">
+    <meta name="description" content="Serviço de vendas, instalação e manutenção de ar condicionado, refrigeração e aquecimento solar com atendimento de qualidade e valor justo">
     <?php wp_head(); ?>
 
   </head>
@@ -45,7 +45,7 @@
           </div>
         </div>
       </div>
-      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#0d6efd">
         <a href="<?php echo home_url(); ?>" class="navbar-brand">
           <?php the_custom_logo(); ?>
         </a>
