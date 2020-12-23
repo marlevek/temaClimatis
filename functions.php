@@ -29,6 +29,10 @@ function climatis_config()
 
   // Adicionar a tag Title
   add_theme_support('title-tag');
+}
+
+function climatis_custom_logo_setup()
+{
 
   // Adicionar Logomarca customizada
   add_theme_support('custom-logo', array(
@@ -38,6 +42,8 @@ function climatis_config()
 
   ));
 }
+
+add_action('after_setup_theme', 'climatis_custom_logo_setup');
 
 // Registro de Sidebars e Widgets
 function climatis_sidebars()
