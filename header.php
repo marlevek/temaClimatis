@@ -33,18 +33,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M86HBB2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header>
-      <div class="container-fluid bg-header text-center icon">
-        <div class="row">
-          <div class="col-sm-12">
-            <a href="https://www.facebook.com/ClimatisArcondicionado" target="_new"><i class="fab fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.linkedin.com/company/climatis-solucoes-em-ar-condicionado-refrigeracao-e-energia-solar" target="_new"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://twitter.com/ArClimatis" target="_new"><i class="fab fa-twitter-square fa-2x"></i></a>
-            <a href="https://www.instagram.com/empresa_climatis" target="_new"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://wa.me/5541992422364?text=sua%20mensagem"> <i class="fab fa-whatsapp fa-2x"></i></a>
-            <a href="mailto:atendimento@climatis.com.br" target="_blank"><i class="far fa-envelope fa-2x "></i></a>
-          </div>
-        </div>
-      </div>
+
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#0d6efd">
         <a href="<?php echo home_url(); ?>" class="navbar-brand">
           <?php the_custom_logo(); ?>
